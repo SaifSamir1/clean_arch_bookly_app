@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/presentation/views/widgets/popup_menu_button.dart';
 import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -26,9 +27,14 @@ class CustomAppBar extends StatelessWidget {
               icon: const Icon(
                 FontAwesomeIcons.magnifyingGlass,
                 size: 22,
-              ))
+              )),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: PopupMenuButtonWidget(),
+          ),
         ],
       ),
     );
   }
 }
+

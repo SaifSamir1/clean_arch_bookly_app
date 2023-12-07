@@ -1,24 +1,25 @@
+import 'package:bookly/Features/home/presentation/views/widgets/shimmer_featured_books_list_view_item.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
 
 class CustomBookImage extends StatelessWidget {
-  const CustomBookImage({Key? key}) : super(key: key);
+  const CustomBookImage({Key? key, required this.imageUrl}) : super(key: key);
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.6 / 4,
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.red,
-            image: const DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage(
-                AssetsData.testImage,
-              ),
-            )),
+      aspectRatio: 2.4 / 4,
+      child:  ClipRRect(
+        borderRadius:BorderRadius.circular(8) ,
+        child: CachedNetworkImage(
+          fit: BoxFit.fill,
+          imageUrl: imageUrl,
+          //دي الحاجه اللي بتظهر قبل التحميل
+          placeholder: (context, url) => const Center(child: ShimmerFeaturedListViewItem()),
+          errorWidget:(context, url, error) =>const Icon(Icons.error_rounded) ,
+        ),
       ),
     );
   }

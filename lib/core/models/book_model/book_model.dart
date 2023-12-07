@@ -1,5 +1,5 @@
-import 'package:bookly/Features/home/domain/entities/book_entity.dart';
 
+import '../../entities/book_entity.dart';
 import 'access_info.dart';
 import 'sale_info.dart';
 import 'search_info.dart';
@@ -25,12 +25,15 @@ class BookModel extends BookEntity {
     this.accessInfo,
     this.searchInfo,
   }) : super(
-            image: volumeInfo.imageLinks?.thumbnail ?? 'https://th.bing.com/th/id/OIP.yVPcqCZQLPX9NJic_Pnh4AHaHa?pid=ImgDet&rs=1',
+            image: volumeInfo.imageLinks?.thumbnail ??
+                'https://vistapointe.net/images/errors-2.jpg',
             title: volumeInfo.title!,
             authorName: volumeInfo.authors?[0] ?? 'UnKnowing',
             price: 0.0,
             rating: volumeInfo.averageRating,
             bookId: id!,
+            category: volumeInfo.categories?[0]?? '',
+            bookLink: volumeInfo.previewLink ?? 'Not Available',
   );
 
   factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(

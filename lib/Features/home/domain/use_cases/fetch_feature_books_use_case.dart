@@ -5,20 +5,22 @@
 import 'package:bookly/Features/home/domain/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
 
+import '../../../../core/entities/book_entity.dart';
 import '../../../../core/errors/failure.dart';
 import '../../../../core/use_case/use_case.dart';
-import '../entities/book_entity.dart';
 
-class FetchFeatureBooksUseCase extends UseCase<List<BookEntity>,NoParameter>
+class FetchFeatureBooksUseCase extends UseCase<List<BookEntity>,int,String>
 {
   final HomeRepo homeRepo;
 
   FetchFeatureBooksUseCase(this.homeRepo);
 
   @override
-  Future<Either<Failure, List<BookEntity>>> call([NoParameter? parameters]) async{
-
-
-    return await homeRepo.fetchFeatureBooks();
+  //ال parameter هو ال page number
+  Future<Either<Failure, List<BookEntity>>> call([int parameter = 0,String? parameter2]) async{
+    return await homeRepo.fetchFeatureBooks(
+      pageNumber: parameter,
+      mainBooks: parameter2 ??''
+    );
   }
 }

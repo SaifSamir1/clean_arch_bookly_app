@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 
 import '../errors/failure.dart';
 
-abstract class UseCase<Type,Parameters>
+abstract class UseCase<Type,Parameters,P>
 {
-  Future<Either<Failure,Type>> call([Parameters parameters]);
+  Future<Either<Failure,Type>> call([Parameters parameter,P parameter2]);
 }
 class NoParameter{
   //عملت ال class دي علشان لو

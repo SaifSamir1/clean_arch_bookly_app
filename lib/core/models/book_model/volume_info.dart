@@ -1,5 +1,5 @@
 
-import 'package:bookly/Features/home/data/models/book_model/penelization_summary.dart';
+import 'package:bookly/core/models/book_model/penelization_summary.dart';
 
 import 'image_links.dart';
 import 'industry_identifier.dart';
