@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'Features/Splash/presentation/views/widgets/custom_text_form_field.dart';
 import 'core/utils/functions/open_boxes_in_hive.dart';
 import 'core/utils/functions/selecting_next_screen.dart';
 import 'core/utils/functions/setup_service_locator.dart';
@@ -18,8 +17,6 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   await openBoxesInHive();
   selectingNextScreen();
-  print(mainBooksController.text);
-  print(mainBooks);
   runApp(const Bookly());
 }
 

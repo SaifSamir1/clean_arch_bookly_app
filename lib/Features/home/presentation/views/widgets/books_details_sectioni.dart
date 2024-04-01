@@ -14,7 +14,6 @@ class BookDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-
     return Column(
       children: [
         Padding(

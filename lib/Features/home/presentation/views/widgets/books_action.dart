@@ -54,7 +54,7 @@ class BooksAction extends StatelessWidget {
       return 'Not Available';
     }
     else {
-      return 'preview';
+      return 'Reed Now';
     }
   }
 }

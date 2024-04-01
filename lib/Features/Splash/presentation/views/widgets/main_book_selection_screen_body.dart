@@ -26,7 +26,7 @@ class MainBookSelectionScreenBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * .22,
+            height: MediaQuery.of(context).size.height * .2,
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),

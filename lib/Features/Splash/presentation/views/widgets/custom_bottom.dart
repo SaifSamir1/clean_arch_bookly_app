@@ -6,7 +6,6 @@
 import 'package:bookly/Features/Splash/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../constants.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/functions/build_future_delay.dart';
@@ -56,7 +55,7 @@ class CustomBottom extends StatelessWidget {
         // Use a custom AlertDialog widget
         return CustomAlertDialog(
           title: '',
-          content: 'Please Enter your main books',
+          content: 'Please Enter your main books\'s name',
           nameOfPositiveButton: 'Ok',
           nameOfNegativeButton: 'Cancel',
           onPositiveButtonPressed: () {
@@ -70,5 +69,4 @@ class CustomBottom extends StatelessWidget {
       },
     );
   }
-
 }

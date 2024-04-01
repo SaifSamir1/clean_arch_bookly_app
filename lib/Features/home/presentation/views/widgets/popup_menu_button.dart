@@ -6,7 +6,6 @@ import 'package:bookly/core/utils/app_router.dart';
 import 'package:bookly/core/utils/functions/delete_box_from_hive.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../constants.dart';
 import '../../../../../core/utils/functions/hive_service.dart';
 import '../../../../../core/utils/styles.dart';
